@@ -4,6 +4,10 @@
 
 1. [Install mise](https://mise.jdx.dev/installing-mise.html).
 2. Run `poetry install` this will install the tools listed in `.tool-versions`.
+3. Set your env variables. I use `direnv`.
+    - Create `.envrc` file in root project folder.
+    - Set your envs like `export ENV="your_env"`.
+    - Run: `direnv allow` to export your envs.
 
 ## How-to run a jupyter notebook
 
