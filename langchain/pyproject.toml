@@ -16,6 +16,30 @@ dependencies = [
     "notebook (>=7.4.2,<8.0.0)"
 ]
 
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+skip-string-normalization = true
+include = '\.(py|pyi|ipynb)$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | \.env
+  | \.eggs
+  | \.idea
+  | __pycache__
+  | build
+  | dist
+)/
+'''
+check = true
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
